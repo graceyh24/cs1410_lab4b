@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/gracehur/cs1410_lab/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/glbl.v,1793294189,verilog,,,,glbl,,uvm,,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/alu.sv,1793294189,systemVerilog,,/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.sv,/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.svh,alu,,uvm,../../../../source,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.sv,1793946390,systemVerilog,,/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu_controller.sv,/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.svh,cpu,,uvm,../../../../source,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.svh,1793294189,verilog,,,,,,,,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu_controller.sv,1793946822,systemVerilog,,/home/gracehur/cs1410_lab/lab4/lab4_server/source/reg_en.sv,,cpu_controller,,uvm,../../../../source,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/reg_en.sv,1793294189,systemVerilog,,/home/gracehur/cs1410_lab/lab4/lab4_server/source/reg_file.sv,,reg_en,,uvm,../../../../source,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/reg_file.sv,1793947807,systemVerilog,,/home/gracehur/cs1410_lab/lab4/lab4_server/source/rw_ram.sv,,reg_file,,uvm,../../../../source,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/source/rw_ram.sv,1793948378,systemVerilog,,/home/gracehur/cs1410_lab/lab4/lab4_server/tb/cpu_tb.sv,/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.svh,rw_ram,,uvm,../../../../source,,,,,
+/home/gracehur/cs1410_lab/lab4/lab4_server/tb/cpu_tb.sv,1793294189,systemVerilog,,,/home/gracehur/cs1410_lab/lab4/lab4_server/source/cpu.svh,cpu_tb,,uvm,../../../../source,,,,,

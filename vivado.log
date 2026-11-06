@@ -1,0 +1,255 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Nov  3 10:45:42 2025
+# Process ID: 36366
+# Current directory: /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server
+# Command line: vivado
+# Log file: /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/vivado.log
+# Journal file: /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/vivado.jou
+# Running On: sec-academic-1.int.seas.harvard.edu, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 26, Host memory: 539830 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /software/xilinx-tools-2022/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.xpr
+CRITICAL WARNING: [Project 1-863] The design checkpoint file /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp was generated for a block design or an IP or BD by an out of context synthesis run and should not directly be used as a source in a Vivado flow to refer to an IP source.  As of 2017.1, the DCP from OOC runs will not contain XDC timing constraints because these are expected to be referred to by the IP .xci or .xcix file source. DCP files prior to 2017.1 will contain incorrect constraints because they were generated with default OOC clock period which will not likely match your top level clock constraints when used in the full design context. 
+ 
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.ip_user_files/ip/blk_mem_gen_1/blk_mem_gen_1_stub.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_mux3.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_mux6.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_cpu.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_cpu_top.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_aludec.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_controller.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_fsm.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_mux2.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_zeroext.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_datapath.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_sl2.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_signext.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF_rw_ram.sv'.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Project 1-863] The design checkpoint file /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp was generated for a block design or an IP or BD by an out of context synthesis run and should not directly be used as a source in a Vivado flow to refer to an IP source.  As of 2017.1, the DCP from OOC runs will not contain XDC timing constraints because these are expected to be referred to by the IP .xci or .xcix file source. DCP files prior to 2017.1 will contain incorrect constraints because they were generated with default OOC clock period which will not likely match your top level clock constraints when used in the full design context. 
+ 
+CRITICAL WARNING: [Project 1-863] The design checkpoint file /home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp was generated for a block design or an IP or BD by an out of context synthesis run and should not directly be used as a source in a Vivado flow to refer to an IP source.  As of 2017.1, the DCP from OOC runs will not contain XDC timing constraints because these are expected to be referred to by the IP .xci or .xcix file source. DCP files prior to 2017.1 will contain incorrect constraints because they were generated with default OOC clock period which will not likely match your top level clock constraints when used in the full design context. 
+ 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.srcs'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.ip_user_files'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx-tools-2022/Vivado/2022.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'cpu_tb'
+INFO: [Vivado 12-12490] The selected simulation model for 'blk_mem_gen_0' IP changed to 'rtl' from '', the simulation run directory will be deleted.
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/software/xilinx-tools-2022/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/software/xilinx-tools-2022/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/data.mem'
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/instr.mem'
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/b_instr.mem'
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/c_instr.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj cpu_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_ALU_DECODER.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_ALU_DECODER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_CONTROL_UNIT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_CONTROL_UNIT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_INSTR_DECODER.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_INSTR_DECODER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_MAIN_DECODER.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_MAIN_DECODER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_SHIFT_EXTEND.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_SHIFT_EXTEND
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_SIGN_EXTEND.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_SIGN_EXTEND
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_cpu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_mux2to1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module STAFF_mux4to1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_en
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/rw_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rw_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/tb/cpu_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-tools-2022/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'a' [/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv:82]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'w_addr' [/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv:111]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/rw_ram.sv" Line 3. Module rw_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv" Line 3. Module STAFF_cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_CONTROL_UNIT.sv" Line 4. Module STAFF_CONTROL_UNIT doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_MAIN_DECODER.sv" Line 3. Module STAFF_MAIN_DECODER doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_ALU_DECODER.sv" Line 3. Module STAFF_ALU_DECODER doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en(INIT=32'b010000000000000000000000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_INSTR_DECODER.sv" Line 1. Module STAFF_INSTR_DECODER doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_file.sv" Line 3. Module reg_file doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_SIGN_EXTEND.sv" Line 1. Module STAFF_SIGN_EXTEND doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_SHIFT_EXTEND.sv" Line 1. Module STAFF_SHIFT_EXTEND doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/alu.sv" Line 3. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/rw_ram.sv" Line 3. Module rw_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv" Line 3. Module STAFF_cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_CONTROL_UNIT.sv" Line 4. Module STAFF_CONTROL_UNIT doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_MAIN_DECODER.sv" Line 3. Module STAFF_MAIN_DECODER doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_ALU_DECODER.sv" Line 3. Module STAFF_ALU_DECODER doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en(INIT=32'b010000000000000000000000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_INSTR_DECODER.sv" Line 1. Module STAFF_INSTR_DECODER doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_file.sv" Line 3. Module reg_file doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_SIGN_EXTEND.sv" Line 1. Module STAFF_SIGN_EXTEND doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_SHIFT_EXTEND.sv" Line 1. Module STAFF_SHIFT_EXTEND doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/alu.sv" Line 3. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux2to1.sv" Line 1. Module STAFF_mux2to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_mux4to1.sv" Line 1. Module STAFF_mux4to1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/reg_en.sv" Line 3. Module reg_en doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.rw_ram
+Compiling module xil_defaultlib.STAFF_MAIN_DECODER
+Compiling module xil_defaultlib.STAFF_ALU_DECODER
+Compiling module xil_defaultlib.STAFF_CONTROL_UNIT
+Compiling module xil_defaultlib.reg_en(INIT=32'b0100000000000000...
+Compiling module xil_defaultlib.STAFF_mux2to1
+Compiling module xil_defaultlib.reg_en
+Compiling module xil_defaultlib.STAFF_INSTR_DECODER
+Compiling module xil_defaultlib.STAFF_mux4to1
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.STAFF_SIGN_EXTEND
+Compiling module xil_defaultlib.STAFF_SHIFT_EXTEND
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.STAFF_cpu
+Compiling module xil_defaultlib.cpu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [Common 17-344] 'execute_script' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7524.160 ; gain = 0.000 ; free physical = 501374 ; free virtual = 505375
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'cpu_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/software/xilinx-tools-2022/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/software/xilinx-tools-2022/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/data.mem'
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/instr.mem'
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/b_instr.mem'
+INFO: [SIM-utils-43] Exported '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim/c_instr.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj cpu_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /software/xilinx-tools-2022/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'a' [/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv:82]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'w_addr' [/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/source/STAFF/STAFF_cpu.sv:111]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kevinkim/cs1410_lab/lab4_STAFF/lab4/lab4_server/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 7630.492 ; gain = 70.531 ; free physical = 500820 ; free virtual = 504834
+run 100 ns

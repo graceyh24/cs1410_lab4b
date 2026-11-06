@@ -1,0 +1,152 @@
+PART B TESTING METHODOLOGY
+
+Purpose
+-------
+my_test_b.asm tests the required Part B instructions: add, sub, and, or,
+xor, nor, sll, srl, sra, slt, and nop. It contains 52 directed test
+instructions followed by eight padding nops. It uses only Part B
+instructions and constructs its own constants, so it does not depend on
+initial general-purpose register values or data-memory contents.
+
+This document describes expected behavior and how to verify it. Actual
+simulation results must be recorded after running the CPU; the expected
+values alone are not evidence of a passing implementation.
+
+Simulation procedure
+--------------------
+1. Assemble the program using the Part A assembler:
+   python3 assembler.py my_test_b.asm > my_test_b.mem
+
+2. Copy the generated words into the instruction-memory initialization
+   file used by cpu_tb.sv, normally asm/instr.mem. Restart the simulation
+   to reload memory and reset the CPU before execution.
+
+3. Observe clk, clk_en, rst, controller state, pc, instr, operand_a,
+   operand_b, alu_x, alu_y, alu_result, saved_result, rf_write_en, and
+   regs_ok. Display data and address values in hexadecimal. Signal names
+   may differ if the implementation was renamed.
+
+4. Compare the destination register with the expected result after EACH
+   instruction's writeback edge. The numbered comments in my_test_b.asm
+   give these expected results. Some destinations are overwritten later,
+   so checking only final register values is insufficient. A testbench
+   can automate comparisons at the corresponding writeback edges.
+
+5. Check multicycle sequencing: fetch captures the instruction and
+   advances PC by four; register read captures source operands; execute
+   captures the ALU result; writeback updates the destination register.
+   Check that register writes occur only when intended and wr_en stays
+   zero because Part B has no memory stores.
+
+Coverage and rationale
+----------------------
+Instructions 1-6: Constant construction and initial dependencies.
+NOR produces FFFFFFFF; shifts produce 1, 7FFFFFFF, and 80000000.
+The program also constructs 00000021. Immediate use of earlier results
+checks whether writeback completes before the following instruction
+reads its operands.
+
+Instructions 7-12: Directed arithmetic and logical checks.
+Each operation receives its own writeback checkpoint. Expected results
+are 00000022, FFFFFFE0, 00000001, 80000021, 00000020, and FFFFFFDE.
+Unequal subtraction operands expose reversed operand selection.
+Distinct bit patterns help expose incorrect ALU function decoding.
+These cases are part of one mixed program; for a separate isolated
+instruction run, use the required setup prefix and stop immediately
+after the instruction being tested.
+
+Instructions 13-17: Signed comparison.
+SLT compares negative and positive values, equal values, and opposite
+signed limits. The expected results are 1, 0, 0, 1, and 0.
+Comparing 80000000 with 7FFFFFFF distinguishes signed from unsigned
+comparison and exposes a comparison that incorrectly uses only the
+sign of a wrapped subtraction.
+
+Instructions 18-21: Sign-limit arithmetic.
+The program checks 7FFFFFFF - 1 = 7FFFFFFE,
+80000000 + 1 = 80000001, FFFFFFFF + 1 = 0, and
+80000000 - 80000000 = 0. These cases exercise signed boundaries and
+cancellation without requiring signed-overflow exception behavior.
+
+Instructions 22-34: Shift amount and sign behavior.
+Each of SLL, SRL, and SRA is tested at shift amounts 0, 1, 7, and 31.
+Shift by zero must preserve the input. Shift by 31 tests the maximum
+fixed shift amount. Negative inputs distinguish SRL zero filling from
+SRA sign filling. For example, 80000000 shifted right by one yields
+40000000 with SRL and C0000000 with SRA. A positive SRA case checks
+that a zero sign bit is preserved. These tests also check selection of
+rt as the value being shifted and shamt as the shift amount.
+
+Instructions 35-43: Source/destination overlap and dependencies.
+The destination overlaps rs, rt, both source registers, and the shift
+input. Each instruction must read the old source value before replacing
+it. The expected successive values of $t4 are:
+00000022, 00000021, FFFFFFE0, 00000000, 00000001,
+00000080, 00000001, FFFFFFFF, FFFFFFFF.
+Every intermediate value must be checked to verify this section.
+
+Instructions 44-48: Immutable zero register.
+ADD attempts to write 2 into $zero, and NOR attempts to write FFFFFFFF
+into $zero. In the proposed CPU, rf_write_en must be suppressed for
+both writes. Subsequent instructions read $zero through both register
+read ports; $a2 and $a3 must each become 1, and $v0 must become 0.
+The original supplied register file may expose X at regs_ok[0] because
+its raw storage is uninitialized. Its architectural read ports must
+still return zero. Check read behavior and write suppression rather
+than relying only on that raw debug entry.
+
+Instructions 49-52: NOP behavior.
+$v1 becomes 2, remains 2 through a nop, becomes 3 through a dependent
+ADD, and remains 3 through another nop. No architectural register may
+change during either nop. PC must continue its normal progression.
+Internal datapath registers may change during nop execution.
+
+Separate clock-enable check
+--------------------------
+In another simulation run, hold clk_en low before an active edge during
+execute or writeback and keep it low for several clock edges. Controller
+state and datapath registers must hold, and no register write may occur.
+After clk_en is restored, execution must resume correctly. This behavior
+requires testbench stimulus; the assembly program cannot toggle clk_en.
+
+Completion and timing
+---------------------
+With the proposed five-state controller, starting in MEMORY_WAIT after
+reset, the 52 numbered instructions take 260 enabled rising clock edges
+following reset release. Check after the final edge's updates settle.
+PC should then be 004000D0. If controller timing differs, identify the
+last instruction's completed writeback instead of assuming this count.
+
+Eight padding nops provide an inspection window after the directed test.
+They do not halt execution. Stop before executing uninitialized memory.
+
+Final expected register values
+------------------------------
+Register     regs_ok index     Hexadecimal value
+$zero               0         00000000 on architectural reads
+$v0                 2         00000000
+$v1                 3         00000003
+$a0                 4         FFFFFFFF
+$a1                 5         3FFFFFFF
+$a2                 6         00000001
+$a3                 7         00000001
+$t0                 8         FFFFFFFF
+$t1                 9         00000001
+$t2                10         7FFFFFFF
+$t3                11         80000000
+$t4                12         FFFFFFFF
+$t5                13         80000000
+$t6                14         C0000000
+$t7                15         FF000000
+$s0                16         00000021
+$s1                17         00000042
+$s2                18         00001080
+$s3                19         80000000
+$s4                20         80000000
+$s5                21         40000000
+$s6                22         01000000
+$s7                23         00000001
+
+Other registers are not initialized by this program and may remain X.
+Final values supplement, rather than replace, per-instruction checks.
+The supplied course test should also be run separately as a regression.
